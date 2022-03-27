@@ -1,0 +1,135 @@
+*{ padding: 0; margin: 0; box-sizing: border-box;}
+/* body{ font-family: 'Roboto', sans-serif;} */
+body a{ text-decoration: none;}
+main{ position: relative;}
+.whatsapp{ position: fixed; left: 10px; bottom: 10px; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 33px; background-color: rgb(40, 167, 40); color: white; z-index: 10;}
+.whatsapp::after{ content: 'Merhaba, Nasıl Yardımcı Olabiliriz?'; font-size: 14px; background-color: rgb(40, 167, 40); color: rgb(40, 167, 40); display: inline-block; width: 0px; height: 22px; overflow: hidden; text-align: center; position: absolute; left: 50px; border-radius: 0 5px 5px 0; z-index: -10; transition: all .4s;}
+.whatsapp:hover::after{ width: 235px; color: white;}
+.whatsapp:hover{ color: white;}
+
+.abs{ position: absolute; top: -80px;}
+.absU{ position: absolute; top: -40px;}
+
+/*---------- Navbar ---------*/
+.p-navbar{ width: 100%; background-color: #000000b3; backdrop-filter: blur(5px); display: flex; align-items: center; justify-content: center; top: 0; left: 0; padding: 0 0 0 20px; z-index: 50; position: fixed;}
+.p-navbar-content{ width: 1200px; display: flex; justify-content: space-between; align-items: center; padding-right: 30px;}
+.navbar-logo{ position: relative; text-decoration: none;}
+.navbar-logo-big{ font-size: 40px; font-weight: 600; color: #fcd180; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.navbar-logo-font{ display: inline-block; color: #f1bb57; width: 50px; overflow-y: hidden; font-size: 14px; font-weight: 300; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; white-space: pre-wrap; line-height: 1; margin-left: -4px; margin-bottom: -2px;}
+.navbar-logo-font .ml{ margin-left: 5px;}
+.com{ font-size: 12px; margin-left: -6px; color: #f7bf58;}
+
+.navbar-item{ list-style: none; display: flex; width: calc(100% - 800px); min-width: 400px; justify-content: space-between; margin: 0; font-family: 'Poppins', sans-serif;}
+.navbar-item li a{ color: #ffffff; font-weight: 600; transition: all .3s;}
+.navbar-item li a:hover{ color: black;}
+
+
+/* Entry */
+/* .entry{width: 100%; height: 100vh; display: flex; flex-direction: column; color: white; background-image: url(https://staticdogtas.mncdn.com/images/thumbs/002/0021143_13.jpeg); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;}
+.entry::before{ content: ''; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; z-index: 0;}
+.entry .entry-pharagraph{ position: relative; z-index: 2; width: 600px; margin-left: 200px; margin-top: 200px;}
+.entry h1{ text-align: left; display: inline-block; padding: 0 15px 5px; border-bottom: 3px solid white; margin-bottom: 20px; font-size: 40px; text-align: center;}
+.entry p{ color: rgb(226, 226, 226);}
+.entry .entry-phone{ color: white; display: inline-block; float: right; padding: 10px 25px; margin-top: 10px; background-color: rgba(255, 255, 255, 0.3); transition: all .3s; font-weight: 600; font-size: 19px;} 
+.entry .entry-phone:hover{ text-decoration: underline;}
+.entry .entry-phone i{ color: black; margin-right: 10px;} */
+
+.entry{width: 100%; height: 100vh; display: flex; flex-direction: column; color: white; background-image: url(https://staticdogtas.mncdn.com/images/thumbs/002/0021143_13.jpeg); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;}
+.entry::before{ content: ''; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; z-index: 0;}
+.entry .entry-pharagraph{ position: relative; z-index: 2; width: 600px; margin-left: 200px; margin-top: 200px;}
+.entry h1{ text-align: left; display: inline-block; padding: 0 15px 5px; border-bottom: 3px solid white; margin-bottom: 20px; font-size: 40px; text-align: center;}
+.entry p{ color: rgb(226, 226, 226);}
+.entry .entry-phone{ color: white; display: inline-block; float: right; padding: 10px 25px; margin-top: 10px; background-color: rgba(255, 255, 255, 0.3); transition: all .3s; font-weight: 600; font-size: 19px;} 
+.entry .entry-phone:hover{ text-decoration: underline;}
+.entry .entry-phone i{ color: black; margin-right: 10px;}
+
+.burger-menu-button{ position: absolute; color: white; right: 20px; font-size: 30px; display: none;}
+.burger-menu-button:hover{ cursor: pointer;}
+
+@media only screen and (max-width: 1010px){
+    .entry .entry-pharagraph{ margin: 200px auto 0;}
+}
+@media only screen and (max-width: 660px){
+    .navbar-item{ display: none;}
+    .burger-menu-button{ display: inline-block;}
+}
+@media only screen and (max-width: 635px){
+    .entry .entry-pharagraph{ width: 100%; padding: 0 20px;}
+}
+
+/* Mobile Navbar */
+.mobile-nav{ position: absolute; width: 100%; background-color: black; top: 60px; left: 0; height: 0px; overflow: hidden; transition: all .2s;}
+.mobile-nav ul{ padding: 10px 0; margin-bottom: 0;}
+.mobile-nav ul li{ list-style: none; transition: all .3s;}
+.mobile-nav ul li a{ color: white; padding: 3px 0 3px 10px; display: inline-block; width: 100%;}
+.mobile-nav ul li:hover{ background-color: rgba(255, 166, 0, 0.178); padding-left: 15px;}
+
+
+/* ---------- About ---------- */
+.about{ margin-top: 70px; position: relative;}
+.about h2{ width: 100%; font-weight: 700; font-size: 40px; color: black; margin-bottom: 20px;}
+.about p{ margin: 0 0 30px; font-size: 18px;}
+.questions > div p{ padding-left: 40px; height: 0; overflow: hidden; transition: all .3s;} 
+.questions > div p.active{ height: 60px;}
+.about .que:hover{ cursor: pointer;}
+.about .que h3{ font-size: 27px; position: relative; padding-left: 25px;}
+.about span{ font-size: 30px; font-weight: 700; color: #00163f; position: absolute; left: -0px;}
+.about > div{ margin: 0 100px;}
+.about .questions > div h3{ display: inline-block;}
+.about .about-pharagraph{ padding-right: 50px;}
+
+
+/* ---------- Products ---------- */
+.product-area{ width: 100%; overflow: hidden; padding: 20px 0 30px; background-color: rgb(247, 247, 247); position: relative;}
+.product-area h2{ text-align: center; margin: 20px 0; font-weight: 700; font-size: 40px;}
+.product-area .product-container{ width: 100%; text-align: center; max-width: 1300px; margin: 0 auto; display: flex; flex-wrap: wrap;}
+.products a{ display: inline-block; position: relative; width: 300px; margin: 10px 10px;}
+/* .product-area a:hover::before{ content: ''; width: 100%; height: 100px; background-color: rgba(0, 0, 0, 0.205); position: absolute; top: 0; left: 0; z-index: 5;} */
+.products a img{ width: 100%; transition: all .2s;}
+.product-area a:hover img{ opacity: .85;}
+
+.product-area .route{ text-align: center;}
+.product-area .route a, .product-area .route span{ display: inline-block; transition: all .2s; font-size: 14px; color: white; padding: 2px 5px; border-radius: 3px; margin: 2px 0;}
+.product-area .route span{ background-color: rgb(107, 107, 107);}
+.product-area .route a:nth-child(2){ background-color: rgb(247, 148, 164);}
+.product-area .route a:hover, .product-area .route span:hover{ color: rgb(0, 0, 78); text-decoration: underline; cursor: pointer;}
+.product-area .route a i{ color: #930157; margin-right: 5px; font-weight: 800;}
+
+@media only screen and (max-width:1300px) {
+    .product-area .product-container{ max-width: 1000px;}
+    .products a{ width: 230px;}
+}
+@media only screen and (max-width:1120px) {
+    .product-area .product-container{ max-width: 750px;}
+    .products a{ width: 230px;}
+}
+@media only screen and (max-width:768px) {
+    .product-area .product-container{ max-width: 100%;}
+    .products a{ width: 47%; margin: 5px;}
+    .about > div{ margin: 0;}
+}
+@media only screen and (max-width:354px) {
+    .products a{ width: 100%; margin: 5px;}
+}
+
+
+/* --------- Contact ---------- */
+.contact-area{ width: 100%; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; padding: 70px 0; position: relative;}
+.contact-area .contact{ display: flex; flex-direction: column; height: 200px; text-align: center; margin: 0 10px;}
+.contact-area .contact div:nth-child(1){ display: inline-block; color: gray; border-radius: 50%; border: 1px solid gray; text-align: center; line-height: 70px; width: 80px; height: 80px; font-size: 30px; margin: 0 auto 10px;}
+.contact-area .contact div:nth-child(2){ display: inline-block; width: 300px;}
+.contact-area .contact a{ color: red; font-weight: 600;}
+.contact-area .contact a:hover{ text-decoration: underline;}
+/* .contact-area .contact p{ width: 300px;} */
+
+@media only screen and (max-width:957px) {
+    .contact-area{ flex-direction: column;}
+    .contact-area .contact{ width: 100%;}
+    .contact-area .contact div:nth-child(2){ width: 100%;}
+}
+
+/* ---------- Footer ---------- */
+footer{ width: 100%; padding: 15px 0; text-align: center; background-color: #f7f7f7; color: black;}
+footer span{ color: rgb(97, 64, 1);}
+
+

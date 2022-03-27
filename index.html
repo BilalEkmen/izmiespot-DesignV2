@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Style.css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav class="p-navbar" id="navbar">
+        <div class="p-navbar-content">
+            <a class="navbar-logo" href="#"><span class="navbar-logo-big">İZMİR</span> <div class="navbar-logo-font">İkinci El <span class="ml">Spotçu</span></div> <span class="com">.com</span> </a>
+            <span class="burger-menu-button" onclick="controlNav()"><i class="fas fa-bars"></i></span>
+            <ul class="navbar-item">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html#hakkimizda">Hakkımızda</a></li>
+                <li><a href="index.html#urunler">Ürünler</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <ul class="mobile-nav-item">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html#urunler">Hakkımızda</a></li>
+                <li><a href="index.html#hakkimizda">Ürünler</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="entry">
+            <div class="entry-pharagraph">
+                <div class="entry-name">
+                    <h1>İzmir Spotçu</h1>
+                    <a class="entry-phone" href="tel:0555 444 3322"><i class="fa-solid fa-phone"></i>0555 444 3322</a>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eligendi dignissimos atque mollitia necessitatibus quas rem, placeat nemo? Sapiente veritatis soluta quasi tempora repudiandae sint, sed dolore iste ea. Quos necessitatibus odio in, rem eos dolorum minus error iusto tenetur porro voluptate sit? Delectus nemo quibusdam reiciendis praesentium quas deleniti aliquam eius.</p>
+            </div>
+        </div>
+        <div class="about">
+            <div class="abs" id="hakkimizda"></div>
+            <div class="row">
+                <div class="col-lg-6 about-pharagraph">
+                    <h2>Hakkımızda</h2>
+                    <p>İzmir/Bornova’da bulunan İzmir Spot Depo MAĞAZA’mız olarak beyaz eşya ve elektronik , 2.el eşya sektöründe profesyonel kadromuz ile uzun yıllardır toptan-perakende müşterilerimize hizmet sunmaya devam etmekteyiz.</p>
+                    <p>Firma olarak, uzun yıllardan bu yana müşteri odaklı yönetim anlayışı ile beyaz eşya ve elektronik sıfır,2.el sektöründe Avrupa ve Dünyanın önde gelen üreticilerine ait ürünleri; dağıtım, satış ve pazarlama faaliyetlerini yerine getirmeye devam etmekteyiz.</p>
+                </div>
+                <div class="col-lg-6 questions">
+                    <h2>Merak Edilen Sorular</h2>
+                    <div>
+                        <div class="que" id="q-1" onclick="openP1()">
+                            <h3><span id="s-1"></span>Eşyalarımı Size Nasıl Gösterebilirim</h3>
+                        </div>
+                        <p id="p-1">Satmak istediğiniz ürünlerin fotoğraflarını Whatsapp üzerinden göndererek fiyat alabilirsiniz</p>
+                    </div>
+                    <div>
+                        <div class="que" id="q-2" onclick="openP2()">
+                            <h3><span id="s-2"></span>Ücrette Anlaşırsak Eşyaları Nasıl Alıyorsunuz</h3>
+                        </div>
+                        <p id="p-2">İzmir bölge ve ilçelerinden adresinize gelip ürünleri nakit ödeme ile alıyoruz</p>
+                    </div>
+                    <div>
+                        <div class="que" id="q-3" onclick="openP3()">
+                            <h3><span id="s-3"></span>Nerelerden 2.El Eya Alıyorsunuz</h3>
+                        </div>
+                        <p id="p-3">İzmir bölge ve ilçelerinden eşya alımı sağlıyoruz.</p>
+                    </div>
+                    <div>
+                        <div class="que" id="q-4" onclick="openP4()">
+                            <h3><span id="s-4"></span>Hangi Eşyaları Alıyorsunuz</h3>
+                        </div>
+                        <p id="p-4">5 yaşını aşmamış garantili; Beyaz Eşya, Led TV ve 4 yaşını aşmamış yeni model Mobilyalarınızı satın alıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-area">
+            <div class="absU" id="urunler"></div>
+            <h2>Ürünlerimiz</h2>
+            <div class="products">
+                <div class="product-container" id="product">
+    
+                </div>
+            </div>
+            <div class="route">
+                <span id="show-more" onclick="showPhoto()">Devamını Gör..</span>
+                <a href=""><i class="fa-brands fa-instagram"></i>Bizi İnstagramdan Da Takip Edebilirsiniz</a>
+            </div>
+        </div>
+        <div class="contact-area">
+            <div class="abs" id="iletisim"></div>
+            <div class="contact">
+                <div><i class="fa-solid fa-map-location-dot"></i></div>
+                <div>
+                    <h3>Bulunduğumuz Konum</h3>
+                    <p>Erzene mahallesi, 17. Sokak, No:7 Bornova / İzmir</p>
+                </div>
+            </div>
+            <div class="contact">
+                <div><i class="fa-solid fa-phone"></i></div>
+                <div>
+                    <h3>Telefon Numaramız</h3>
+                    <a href="tel:05554443322">+90 555 444 3322</a>
+                </div>
+            </div>
+            <div class="contact">
+                <div><i class="fa-solid fa-calendar-check"></i></div>
+                <div>
+                    <h3>Çalışma Saatlerimiz</h3>
+                    <p>Pazar günü hariç sabah 08:00 akşam 21:00 arasında hizmet vermekteyiz.</p>
+                </div>
+            </div>
+        </div>
+        <a href="https://wa.me/05554443322" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+    </main>
+    <footer>
+        İzmir Nuh Spot | <span>&copy;</span> Tüm Hakları Saklıdır  
+    </footer>
+</body>
+<script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+<script type="text/javascript">
+
+    var max = 8;
+
+    var userFeed = new Instafeed({
+        get: 'user',
+        target: "product",
+        resolution: 'low_resolution',
+        limit:8,
+        accessToken: 'IGQVJXZAkxST1A1ZA21QUHVKMGNlZAjZAWR3pMb3YtbHJpVnV3anhqQkg1TDdvQmpkNGgwOHo5SVJkal9MdWxhandvR2pJajU3ODRtOHhFVkI4c2g4ZAnZAhOUhzXzdWSmM1a2NzTzVFYnF6bnIwTzVpaGR4UAZDZD'
+        
+    });
+ 
+    userFeed.run();
+
+    var productArea = document.getElementById('product')
+    var childrenProduct = 0;
+    
+    function showPhoto(){
+        max+=8;
+        userFeed._options.limit=max;
+        userFeed.run();
+        console.log(childrenProduct);
+        console.log(productArea.children.length);
+        if(productArea.children.length == childrenProduct){
+            document.getElementById('show-more').style.display = 'none'
+        }else{           
+            childrenProduct = productArea.children.length
+        }
+    }
+</script>
+</html>
