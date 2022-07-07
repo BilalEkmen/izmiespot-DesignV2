@@ -130,37 +130,18 @@ function reset(){
     s4.innerHTML = '+'
 }
 
-var productArea = document.getElementById('product')
-var showMore = document.getElementById('show-more')
-
-function showPhoto(){
-    console.log(productArea.childElementCount);
-
+function showWhatsapp(){
+    document.getElementById('wp').style.width = '235px'
+    document.getElementById('wp').style.color = 'white'
+    setTimeout(() => {
+        document.getElementById('wp').style.width = '0px'        
+        document.getElementById('wp').style.color = 'rgb(40, 167, 40)'        
+    }, 1500);
 }
 
+setInterval(showWhatsapp, 5000);
 
 
-
-// var count = 400;
-// function showPhoto(){
-//     console.log(productArea.childElementCount);
-//     productArea.style.height = count + 'px'
-//     count += 200
-//     console.log(count);
-
-//     if(productArea.childElementCount <= 8 && count > 600){
-//         showMore.style.pointerEvents = 'none';
-//         showMore.innerHTML = 'Ürünler Bitti'
-//     }
-    
-// }
-
-// window.addEventListener('resize', (e) =>{
-//     var screenWidth = window.window.innerWidth
-//     if(screenWidth <= 773){
-//         productArea.style.height = count + 500 + 'px'
-//     }
-// })
 
 reset()
 
